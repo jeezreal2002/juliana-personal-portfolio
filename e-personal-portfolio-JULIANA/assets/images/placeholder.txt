@@ -1,0 +1,13 @@
+Please add your images here:
+
+1. profile.jpg - Your professional photo for hero section (recommended size: 800x800px)
+2. about-photo.jpg - Your photo for about section (recommended size: 800x1000px, portrait orientation)
+3. hero-bg.jpg - Background image for hero section (optional, can be a café interior)
+
+For now, the website will work without these images. The photo areas will show a placeholder background color.
+
+Image Tips:
+- Use high-quality images (at least 72 DPI for web)
+- Ensure good lighting and professional appearance
+- Consider using images that show you in your work environment (café, hospitality setting)
+- Keep file sizes under 500KB for optimal loading speed
