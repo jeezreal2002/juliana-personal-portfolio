@@ -50,10 +50,30 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline {
+        max-width: 800px;
+    }
+
+    .timeline-item {
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .timeline-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+
+    .timeline-content {
+        padding: var(--spacing-lg);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: calc(50% + var(--spacing-lg));
+    }
+
     .timeline-item:nth-child(even) .timeline-content {
-        margin-right: calc(50% + var(--spacing-md));
-        margin-left: calc(50% + var(--spacing-md));
+        margin-left: calc(50% + var(--spacing-lg));
     }
 }
 
@@ -178,35 +198,81 @@
     }
 
     /* Timeline Mobile */
+    .timeline {
+        padding: var(--spacing-md) 0;
+        padding-left: var(--spacing-sm);
+    }
+
     .timeline::before {
-        left: 40px;
+        left: 38px;
+        width: 3px;
     }
 
     .timeline-item {
-        grid-template-columns: 80px 1fr;
-        gap: var(--spacing-md);
-        margin-bottom: var(--spacing-xl);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-2xl);
+        grid-template-columns: none;
     }
 
     .timeline-item:nth-child(odd) .timeline-content,
     .timeline-item:nth-child(even) .timeline-content {
-        grid-column: 2;
+        grid-column: auto;
         text-align: left;
+        flex: 1;
+        margin: 0 !important;
     }
 
     .timeline-icon {
-        grid-column: 1;
+        grid-column: auto;
         width: 60px;
         height: 60px;
-        font-size: 28px;
+        font-size: 26px;
+        flex-shrink: 0;
+        margin-top: 0;
+    }
+
+    .timeline-icon::before {
+        display: none;
     }
 
     .timeline-content {
-        padding: var(--spacing-md);
+        padding: var(--spacing-lg);
+        margin-right: var(--spacing-sm);
+    }
+
+    .timeline-content::before {
+        height: 3px;
     }
 
     .timeline-title {
-        font-size: 18px;
+        font-size: 19px;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .timeline-period {
+        font-size: 11px;
+        padding: 4px 12px;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .timeline-institution {
+        font-size: 15px;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .timeline-location {
+        font-size: 13px;
+        margin-bottom: var(--spacing-sm);
+        line-height: 1.5;
+    }
+
+    .timeline-program {
+        font-size: 14px;
+        margin-top: var(--spacing-sm);
+        line-height: 1.5;
     }
 
     /* Certificates Mobile */
